@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire de projet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 2rem;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post">
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required />
+    </div>
+
+    <div class="form-group">
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required />
+    </div>
+
+    <div class="form-group">
+      <label for="groupe">Groupe</label>
+      <input type="number" id="groupe" name="groupe" min="10" max="100" placeholder="10 à 100" required />
+    </div>
+
+    <div class="form-group">
+      <label for="sujet">Sujet</label>
+      <input type="text" id="sujet" name="sujet" placeholder="Titre du sujet" required />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4" placeholder="Décrivez brièvement votre projet" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="dateDebut">Date de début</label>
+      <input type="date" id="dateDebut" name="dateDebut" required />
+    </div>
+
+    <div class="form-group">
+      <label for="dateFin">Date de fin</label>
+      <input type="date" id="dateFin" name="dateFin" required />
+    </div>
+
+    <div class="form-group">
+      <label for="encadrement">Professeur d'encadrement</label>
+      <select id="encadrement" name="encadrement" required>
+        <option value="">Sélectionnez un professeur</option>
+        <option value="prof1">Prof. A. Dupont</option>
+        <option value="prof2">Prof. B. Martin</option>
+        <option value="prof3">Prof. C. Meriem</option>
+      </select>
+    </div>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+</body>
+</html>
